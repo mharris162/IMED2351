@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <head>
-    <title>Assignment 1</title>
+    <title>Assignment 2</title>
 </head>
 <body>
     <h1> Hello!</h1>
-    <p> My favorite number is...</p>
-    <script src="app.js"></script>
-    <script> document.write (4+4); </script>
+    <p id="global"></p>
+
+<script>
+var edit = 0; //global variable & starting value for edits
+
+edit = edit +1; // edit total 1
+edit = edit +1; // edit total 2
+document.getElementById("global").innerHTML =
+"This website has been edited: " + edit;
+</script>
+
+
+<p id="block"></p>
+
+<script> 
+    {var x = 2;
+    var y = 7
+    var z = x + y;} //block variable
+    document.getElementById("block").innerHTML = z;
+    </script>
+
+
+<p id="pet"></p>
+
+<script>
+const pet = 
+{type:"cat", //string variable
+age:9, 
+color:"tuxedo"}; //string variable
+document.getElementById("pet").innerHTML = "I have a pet " + pet.type; //object variable using const
+</script>
+
 </body>
 </html
